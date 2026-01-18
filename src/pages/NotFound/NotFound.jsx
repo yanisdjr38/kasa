@@ -1,10 +1,12 @@
-function Error() {
+import { Link } from "react-router-dom";
+
+function NotFound() {
   return (
     <div>
       <h1>404 - Page Not Found</h1>
-      <LinkRouter to="/home">Go to Home</LinkRouter>
+      <Link to="/">Go to Home</Link>
     </div>
   );
 }
 
-export default Error;
+export default NotFound;
