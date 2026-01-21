@@ -1,7 +1,9 @@
+import NavBar from "../../components/NavBar";
+
 function About() {
   return (
     <div>
-      <h1>About Page</h1>
+      <NavBar />
       <p>This is the about page of the application.</p>
     </div>
   );
