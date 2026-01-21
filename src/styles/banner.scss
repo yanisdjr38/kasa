@@ -22,13 +22,14 @@
   }
   .banner-text {
     position: absolute;
+
     bottom: 30px;
     left: 50%;
     transform: translateX(-50%);
     color: white;
     font-family: "Montserrat", sans-serif;
-    font-size: 36px;
-    font-weight: 600;
+    font-size: 48px;
+    font-weight: 700;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     z-index: 2;
   }
