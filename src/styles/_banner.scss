@@ -19,8 +19,7 @@
   .banner-text {
     position: absolute;
     bottom: 30px;
-    left: 50%;
-    transform: translateX(-50%);
+    justify-self: anchor-center;
     color: $background-color;
     font-family: $font-family;
     font-size: 48px;

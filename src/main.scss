@@ -1,9 +1,10 @@
 @use "./styles/variables" as *;
 @use "./styles/mixins" as *;
-@import "./styles/index";
-@import "./styles/navbar";
-@import "./styles/banner";
-@import "./styles/card";
-@import "./styles/home";
-@import "./styles/about";
-@import "./styles/footer";
+@use "./styles/index" as *;
+@use "./styles/navbar" as *;
+@use "./styles/banner" as *;
+@use "./styles/card" as *;
+@use "./styles/home" as *;
+@use "./styles/about" as *;
+@use "./styles/footer" as *;
+@use "./styles/notfound" as *;
