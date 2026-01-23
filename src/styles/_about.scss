@@ -1,3 +1,5 @@
+@use "./variables" as *;
+
 .about-section {
   display: flex;
   flex-direction: column;
@@ -11,23 +13,23 @@
     flex-direction: column;
     gap: 40px;
     li {
-      background-color: #ff6060;
+      background-color: $primary-color;
       padding: 10px 20px 10px 20px;
-      border-radius: 5px;
+      border-radius: $radius-small;
       font-size: 24px;
       font-weight: bold;
       margin-bottom: 10px;
-      color: #ffffff;
+      color: $background-color;
     }
     div {
-      background-color: #f7f7f7;
+      background-color: $secondary-color;
       padding: 20px;
-      border-radius: 8px;
+      border-radius: $radius-small;
       p {
         margin: 0;
         font-size: 16px;
         line-height: 1.5;
-        color: #333;
+        color: $text-color;
       }
     }
   }

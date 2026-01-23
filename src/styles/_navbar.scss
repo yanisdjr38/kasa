@@ -1,3 +1,5 @@
+@use "./variables" as *;
+
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -11,8 +13,8 @@
     }
     a {
       text-decoration: none;
-      color: black;
-      font-family: Montserrat, sans-serif;
+      color: $text-color;
+      font-family: $font-family;
       font-weight: 500;
       font-size: 24px;
 

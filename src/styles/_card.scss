@@ -1,22 +1,23 @@
+@use "./variables" as *;
+
 .card {
-  background-color: #ff6060;
-  border-radius: 8px;
+  background-color: $primary-color;
+  border-radius: $radius-small;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   padding: 16px;
   margin: 16px 0;
-  font-family: Montserrat, sans-serif;
-  width: 340px;
+  width: 29%;
   height: 340px;
   img {
     width: 100%;
     height: 80%;
-    border-radius: 8px;
+    border-radius: $radius-small;
   }
   .card-title {
-    font-family: Montserrat, sans-serif;
+    font-family: $font-family;
     font-size: 18px;
     font-weight: 600;
     margin: 12px 0 8px 0;
-    color: white;
+    color: $background-color;
   }
 }

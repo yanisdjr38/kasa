@@ -1,5 +1,3 @@
-import "../styles/card.scss";
-
 function Card({ title, cover }) {
   return (
     <div className="card">

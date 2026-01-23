@@ -1,7 +1,9 @@
+@use "./variables" as *;
+
 .logementsSection {
   padding: 50px 20px;
-  background-color: #f6f6f6;
-  border-radius: 25px;
+  background-color: $secondary-color;
+  border-radius: $radius-xl;
   .cards-grid {
     display: flex;
     flex-wrap: wrap;

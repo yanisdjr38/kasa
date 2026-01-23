@@ -3,7 +3,6 @@ import Card from "../../components/Card";
 import Footer from "../../components/Footer";
 import NavBar from "../../components/NavBar";
 import logements from "../../data/logements.json";
-import "../../styles/home.scss";
 
 function Home() {
   return (
