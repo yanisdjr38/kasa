@@ -1,3 +1,4 @@
+import bannerImage from "../../assets/images/banner_home.png";
 import Banner from "../../components/Banner";
 import Card from "../../components/Card";
 import Footer from "../../components/Footer";
@@ -9,7 +10,10 @@ function Home() {
     <div>
       <header>
         <NavBar />
-        <Banner />
+        <Banner
+          bannerImage={bannerImage}
+          bannerText="Chez vous, partout et ailleurs"
+        />
       </header>
       <main>
         <div className="logementsSection">

@@ -1,3 +1,4 @@
+import aboutBannerImage from "../../assets/images/banner_about.png";
 import Banner from "../../components/Banner";
 import Footer from "../../components/Footer";
 import NavBar from "../../components/NavBar";
@@ -7,7 +8,7 @@ function About() {
     <>
       <header>
         <NavBar />
-        <Banner />
+        <Banner bannerImage={aboutBannerImage} bannerText="" />
       </header>
       <main>
         <section className="about-section">
