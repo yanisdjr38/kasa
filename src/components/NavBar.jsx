@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import logo from "../assets/logo/LOGO.png";
 
 function NavBar() {
@@ -9,10 +10,10 @@ function NavBar() {
 
       <ul className="nav-links">
         <li>
-          <a href="/">Acceuil</a>
+          <Link to="/">Accueil</Link>
         </li>
         <li>
-          <a href="/about">À propos</a>
+          <Link to="/about">À propos</Link>
         </li>
       </ul>
     </nav>
