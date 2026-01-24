@@ -11,25 +11,44 @@
     margin: 0;
     @include flex-column;
     gap: 40px;
-    li {
+    summary {
       background-color: $primary-color;
       padding: 10px 20px 10px 20px;
       border-radius: $radius-small;
       font-size: 24px;
       font-weight: bold;
-      margin-bottom: 10px;
+      font-family: $font-family;
       color: $background-color;
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      cursor: pointer;
+
+      &::-webkit-details-marker {
+        display: none;
+      }
+
+      &::after {
+        font-family: "Font Awesome 6 Free";
+        font-weight: 900;
+        content: "\f106"; /* fa-angle-up */
+        color: #ffffff;
+        transition: transform 0.3s ease;
+      }
     }
-    div {
+
+    details[open] summary::after {
+      transform: rotate(180deg);
+    }
+    p {
       background-color: $secondary-color;
       padding: 20px;
-      border-radius: $radius-small;
-      p {
-        margin: 0;
-        font-size: 16px;
-        line-height: 1.5;
-        color: $text-color;
-      }
+      border-radius: 0px 0px 8px 8px;
+      margin: 0;
+      font-size: 18px;
+      color: $text-color;
+      font-family: $font-family;
     }
   }
 }
