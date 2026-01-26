@@ -45,7 +45,17 @@ function Housing() {
           <img src={host.picture} alt={host.name} />
         </div>
         <div>
-          <p>{rating} </p>
+          <div className="rating-stars">
+            {[...Array(5)].map((_, i) => (
+              <i
+                key={i}
+                className={
+                  i < parseInt(rating) ? "fa-solid fa-star" : "fa-solid fa-star"
+                }
+                style={{ color: i < parseInt(rating) ? "#FF6060" : "#E3E3E3" }}
+              ></i>
+            ))}
+          </div>
         </div>
       </div>
       <div className="description-equipments">
