@@ -1,9 +1,22 @@
+import { useState } from "react";
 import { Navigate, useParams } from "react-router-dom";
 import logements from "../../data/logements.json";
 
 function Housing() {
   const { id } = useParams();
   const logement = logements.find((item) => item.id === id);
+
+  // État pour le carrousel d'images
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const goToNext = () => {
+    setCurrentIndex((prevIndex) => (prevIndex + 1) % logement.pictures.length);
+  };
+  const goToPrevious = () => {
+    setCurrentIndex(
+      (prevIndex) =>
+        (prevIndex - 1 + logement.pictures.length) % logement.pictures.length,
+    );
+  };
 
   // Redirection vers la page 404 si le logement n'existe pas
   if (!logement) {
@@ -23,10 +36,26 @@ function Housing() {
 
   return (
     <>
-      <div className="caroussel">
-        {pictures.map((picture, index) => (
-          <img key={index} src={picture} alt={`${title} - ${index + 1}`} />
-        ))}
+      <div className="carousel">
+        <button className="carousel-button prev" onClick={goToPrevious}>
+          <i className="fa-solid fa-angle-left fa-2xl"></i>
+        </button>
+        <button className="carousel-button next" onClick={goToNext}>
+          <i className="fa-solid fa-angle-right fa-2xl"></i>
+        </button>
+        <span className="carousel-pagination">
+          {currentIndex + 1} / {pictures.length}
+        </span>
+        <ul>
+          {pictures.map((picture, index) => (
+            <li
+              key={index}
+              style={{ display: index === currentIndex ? "block" : "none" }}
+            >
+              <img src={picture} alt={`${title} - ${index + 1}`} />
+            </li>
+          ))}
+        </ul>
       </div>
       <div className="housing-infos">
         <h2>{title}</h2>
