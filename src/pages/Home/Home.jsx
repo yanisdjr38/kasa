@@ -12,10 +12,12 @@ function Home() {
       />
 
       <div className="logementsSection">
+        {/* Vérification si la liste des logements est vide */}
         {logements.length === 0 ? (
           <p>Aucun logement disponible.</p>
         ) : (
           <section className="cards-grid">
+            {/* Affichage de la grille de cartes de logements */}
             {logements.map(({ id, title, cover }) => (
               <Card key={id} id={id} title={title} cover={cover} />
             ))}

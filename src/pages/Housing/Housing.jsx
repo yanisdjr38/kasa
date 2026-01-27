@@ -44,9 +44,11 @@ function Housing() {
           <i className="fa-solid fa-angle-right fa-2xl"></i>
         </button>
         <span className="carousel-pagination">
+          {/* Pagination du carrousel */}
           {currentIndex + 1} / {pictures.length}
         </span>
         <ul>
+          {/* Affichage des images du carrousel */}
           {pictures.map((picture, index) => (
             <li
               key={index}
@@ -58,6 +60,7 @@ function Housing() {
         </ul>
       </div>
       <div className="housing-header">
+        {/* Informations sur le logement */}
         <div className="housing-infos">
           <h2>{title}</h2>
           <h3>{location}</h3>
@@ -70,12 +73,14 @@ function Housing() {
           </ul>
         </div>
         <div className="host-header">
+          {/* Informations sur l'hôte */}
           <div className="host-info">
             <p className="host-name">{host.name}</p>
             <img className="host-picture" src={host.picture} alt={host.name} />
           </div>
           <div>
             <div className="host-rating">
+              {/* Affichage des étoiles de notation */}
               {[...Array(5)].map((_, i) => (
                 <i
                   key={i}
