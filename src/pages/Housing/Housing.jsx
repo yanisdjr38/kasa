@@ -57,48 +57,62 @@ function Housing() {
           ))}
         </ul>
       </div>
-      <div className="housing-infos">
-        <h2>{title}</h2>
-        <h3>{location}</h3>
-        <ul>
-          {tags.map((tag, index) => (
-            <li key={index} className="tag-item">
-              {tag}
-            </li>
-          ))}
-        </ul>
-      </div>
-      <div className="host-rating">
-        <div className="host-info">
-          <p>{host.name}</p>
-          <img src={host.picture} alt={host.name} />
-        </div>
-        <div>
-          <div className="rating-stars">
-            {[...Array(5)].map((_, i) => (
-              <i
-                key={i}
-                className={
-                  i < parseInt(rating) ? "fa-solid fa-star" : "fa-solid fa-star"
-                }
-                style={{ color: i < parseInt(rating) ? "#FF6060" : "#E3E3E3" }}
-              ></i>
+      <div className="housing-header">
+        <div className="housing-infos">
+          <h2>{title}</h2>
+          <h3>{location}</h3>
+          <ul>
+            {tags.map((tag, index) => (
+              <li key={index} className="tag-item">
+                {tag}
+              </li>
             ))}
+          </ul>
+        </div>
+        <div className="host-header">
+          <div className="host-info">
+            <p className="host-name">{host.name}</p>
+            <img className="host-picture" src={host.picture} alt={host.name} />
+          </div>
+          <div>
+            <div className="host-rating">
+              {[...Array(5)].map((_, i) => (
+                <i
+                  key={i}
+                  className={
+                    i < parseInt(rating)
+                      ? "fa-solid fa-star"
+                      : "fa-solid fa-star"
+                  }
+                  style={{
+                    color: i < parseInt(rating) ? "#FF6060" : "#E3E3E3",
+                  }}
+                ></i>
+              ))}
+            </div>
           </div>
         </div>
       </div>
+
       <div className="description-equipments">
         <div className="description">
-          <h4>Description</h4>
-          <p>{description}</p>
+          <details>
+            <summary>Description</summary>
+            <p>{description}</p>
+          </details>
         </div>
         <div className="equipments">
-          <h4>Équipements</h4>
-          <ul>
-            {equipments.map((equipment, index) => (
-              <li key={index}>{equipment}</li>
-            ))}
-          </ul>
+          <details>
+            <summary>Équipements</summary>
+            <p>
+              <ul>
+                {" "}
+                {equipments.map((equipment, index) => (
+                  <li key={index}>{equipment}</li>
+                ))}
+              </ul>
+            </p>
+          </details>
         </div>
       </div>
     </>
