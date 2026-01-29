@@ -27,4 +27,15 @@
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     z-index: 2;
   }
+
+  @include mobile-screen {
+    height: $height-banner-mobile;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    .banner-text {
+      font-size: $font-size-md;
+      align-self: anchor-center;
+      padding: 5px 20px;
+    }
+  }
 }

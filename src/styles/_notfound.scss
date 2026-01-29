@@ -7,7 +7,7 @@
 
   .code__error {
     font-family: $font-family;
-    font-size: 288px;
+    font-size: $font-size-xl;
     font-weight: 700;
     font-style: normal;
     color: $primary-color;
@@ -15,12 +15,12 @@
   }
 
   .message__error {
-    font-size: 36px;
+    font-size: $font-size-l;
     color: $primary-color;
   }
 
   .Link {
-    font-size: 18px;
+    font-size: $font-size-m;
     color: $text-color;
     text-decoration: none;
 

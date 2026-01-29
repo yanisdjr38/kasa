@@ -15,11 +15,29 @@
       color: $text-color;
       font-family: $font-family;
       font-weight: 500;
-      font-size: 24px;
+      font-size: $font-size-md;
 
       &:hover {
         text-decoration: underline;
       }
+    }
+  }
+
+  @include mobile-screen {
+    height: $height-banner-mobile;
+    @include flex-between;
+    align-items: center;
+    padding: 5px 10px;
+
+    .nav-links {
+      gap: 20px;
+      li a {
+        font-size: $font-size-xs;
+      }
+    }
+
+    h1 img {
+      height: $logo-height-mobile;
     }
   }
 }

@@ -12,4 +12,11 @@
     justify-content: center;
     margin-top: 40px;
   }
+  @include mobile-screen {
+    padding: 20px 10px;
+    .cards-grid {
+      gap: 20px;
+      margin-top: 20px;
+    }
+  }
 }

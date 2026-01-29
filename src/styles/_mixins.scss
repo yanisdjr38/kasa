@@ -68,7 +68,7 @@
     background-color: $primary-color;
     padding: 10px 20px 10px 20px;
     border-radius: $radius-small;
-    font-size: 24px;
+    font-size: $font-size-md;
     font-weight: bold;
     font-family: $font-family;
     color: $background-color;
@@ -99,8 +99,36 @@
     padding: 20px;
     border-radius: 0px 0px 8px 8px;
     margin: 0;
-    font-size: 18px;
+    font-size: $font-size-m;
     color: $text-color;
     font-family: $font-family;
+  }
+}
+
+// Responsive mobile
+
+@mixin mobile-screen {
+  @media (max-width: 375px) {
+    @content;
+  }
+}
+@mixin tablet-screen {
+  @media (max-width: 768px) {
+    @content;
+  }
+}
+@mixin desktop-screen {
+  @media (min-width: 1025px) {
+    @content;
+  }
+}
+@mixin large-desktop-screen {
+  @media (min-width: 1440px) {
+    @content;
+  }
+}
+@mixin extra-large-desktop-screen {
+  @media (min-width: 1920px) {
+    @content;
   }
 }

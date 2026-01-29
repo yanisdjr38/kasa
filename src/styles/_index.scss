@@ -6,4 +6,8 @@ body {
   margin-right: 200px;
   font-family: $font-family;
   background-color: $background-color;
+  @media screen and (max-width: 375px) {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
 }
