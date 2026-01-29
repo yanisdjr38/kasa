@@ -2,11 +2,13 @@
 @use "./mixins" as *;
 
 body {
+  width: 100%;
   margin-left: 200px;
   margin-right: 200px;
   font-family: $font-family;
   background-color: $background-color;
-  @media screen and (max-width: 375px) {
+
+  @include mobile-screen {
     margin-left: 10px;
     margin-right: 10px;
   }
