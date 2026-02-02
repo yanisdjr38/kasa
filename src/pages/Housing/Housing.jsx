@@ -46,6 +46,10 @@ function Housing() {
         <span className="carousel-pagination">
           {/* Pagination du carrousel */}
           {currentIndex + 1} / {pictures.length}
+          {/* Affichage si une seule image */}
+          {pictures.length === 1 && (
+            <style>{`.carousel-button { display: none; }`}</style>
+          )}
         </span>
         <ul>
           {/* Affichage des images du carrousel */}
