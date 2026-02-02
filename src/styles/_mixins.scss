@@ -108,12 +108,12 @@
 // Responsive mobile
 
 @mixin mobile-screen {
-  @media (max-width: 376px) {
+  @media (max-width: 768px) {
     @content;
   }
 }
 @mixin tablet-screen {
-  @media (max-width: 768px) {
+  @media (max-width: 1024px) {
     @content;
   }
 }
@@ -128,7 +128,7 @@
   }
 }
 @mixin extra-large-desktop-screen {
-  @media (min-width: 1920px) {
+  @media (min-width: 2560px) {
     @content;
   }
 }

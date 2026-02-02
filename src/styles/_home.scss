@@ -5,13 +5,23 @@
   padding: 50px 20px;
   background-color: $secondary-color;
   border-radius: $radius-xl;
+
   .cards-grid {
     display: flex;
     flex-wrap: wrap;
     gap: 30px;
-    justify-content: center;
     margin-top: 40px;
+    justify-content: center;
   }
+
+  @include tablet-screen {
+    padding: 30px 15px;
+    .cards-grid {
+      gap: 25px;
+      margin-top: 30px;
+    }
+  }
+
   @include mobile-screen {
     padding: 20px 10px;
     .cards-grid {

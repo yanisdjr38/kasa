@@ -3,6 +3,7 @@
 
 .navbar {
   @include flex-between;
+  align-items: center;
   padding: 10px 20px;
   .nav-links {
     display: flex;
@@ -25,8 +26,6 @@
 
   @include mobile-screen {
     height: $height-banner-mobile;
-    @include flex-between;
-    align-items: center;
     padding: 5px 10px;
 
     .nav-links {
@@ -38,6 +37,35 @@
 
     h1 img {
       height: $logo-height-mobile;
+    }
+  }
+
+  @include tablet-screen {
+    height: $height-banner-tablet;
+    padding: 8px 15px;
+
+    h1 img {
+      height: $logo-height-tablet;
+    }
+    .nav-links {
+      gap: 40px;
+      li a {
+        font-size: $font-size-s;
+      }
+    }
+  }
+
+  @include desktop-screen {
+    padding: 10px 20px;
+
+    h1 img {
+      height: auto;
+    }
+    .nav-links {
+      gap: 57px;
+      li a {
+        font-size: $font-size-md;
+      }
     }
   }
 }

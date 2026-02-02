@@ -38,4 +38,25 @@
       padding: 5px 20px;
     }
   }
+  @include tablet-screen {
+    height: $height-banner-tablet;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    .banner-text {
+      font-size: $font-size-md;
+      align-self: anchor-center;
+      padding: 10px 30px;
+    }
+  }
+
+  @include desktop-screen {
+    height: 223px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    .banner-text {
+      font-size: 48px;
+      align-self: anchor-center;
+      padding: 15px 40px;
+    }
+  }
 }

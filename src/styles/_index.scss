@@ -26,4 +26,16 @@ body {
     padding-left: 20px;
     padding-right: 20px;
   }
+  @include tablet-screen {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+  @include desktop-screen {
+    padding-left: 100px;
+    padding-right: 100px;
+  }
+  @include extra-large-desktop-screen {
+    padding-left: 300px;
+    padding-right: 300px;
+  }
 }
