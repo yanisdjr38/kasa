@@ -14,7 +14,7 @@
 
   img {
     width: 100%;
-    flex: 1;
+    height: 80%;
     border-radius: $radius-small;
     object-fit: cover;
   }
@@ -26,6 +26,16 @@
     margin: 12px 0 0 0;
     color: $background-color;
   }
+  @include mobile-screen {
+    width: 335px;
+    height: 255px;
+    padding: 12px;
+
+    .card-title {
+      font-size: $font-size-s;
+      margin: 8px 0 0 0;
+    }
+  }
 
   @include tablet-screen {
     width: 335px;
@@ -33,19 +43,8 @@
     padding: 14px;
 
     .card-title {
-      font-size: $font-size-m;
-      margin: 10px 0 0 0;
-    }
-  }
-
-  @include mobile-screen {
-    width: 335px;
-    height: 255px;
-    padding: 12px;
-
-    .card-title {
       font-size: $font-size-sm;
-      margin: 8px 0 0 0;
+      margin: 10px 0 0 0;
     }
   }
 }

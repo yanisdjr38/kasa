@@ -1,21 +1,22 @@
+import Dropdown from "./Dropdown";
+
 function DescriptionEquipments({ description, equipments }) {
   return (
     <div className="description-equipments">
       <div className="description">
-        <details>
-          <summary>Description</summary>
-          <p>{description}</p>
-        </details>
+        <Dropdown summary="Description" paragraph={description} />
       </div>
       <div className="equipments">
-        <details>
-          <summary>Équipements</summary>
-          <ul>
-            {equipments.map((equipment, index) => (
-              <li key={index}>{equipment}</li>
-            ))}
-          </ul>
-        </details>
+        <Dropdown
+          summary="Équipements"
+          paragraph={
+            <ul>
+              {equipments.map((equipment, index) => (
+                <li key={index}>{equipment}</li>
+              ))}
+            </ul>
+          }
+        />
       </div>
     </div>
   );

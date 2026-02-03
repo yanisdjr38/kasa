@@ -2,7 +2,7 @@ function Dropdown({ summary, paragraph }) {
   return (
     <details className="dropdown">
       <summary>{summary}</summary>
-      <p>{paragraph}</p>
+      <div className="dropdown-content">{paragraph}</div>
     </details>
   );
 }
