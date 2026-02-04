@@ -5,6 +5,7 @@
   @include flex-between;
   align-items: center;
   padding: 10px 20px;
+
   .nav-links {
     display: flex;
     gap: 57px;
@@ -25,11 +26,14 @@
   }
 
   @include mobile-screen {
+    @include flex-column;
+    align-items: center;
     height: $height-banner-mobile;
     padding: 5px 10px;
 
     .nav-links {
       gap: 20px;
+      padding: 0px;
       li a {
         font-size: $font-size-xs;
       }
