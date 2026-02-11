@@ -26,7 +26,6 @@
   }
 
   @include mobile-screen {
-    @include flex-column;
     align-items: center;
     height: $height-banner-mobile;
     padding: 5px 10px;

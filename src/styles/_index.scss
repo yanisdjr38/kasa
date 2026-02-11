@@ -27,12 +27,10 @@ body {
   }
 
   @include mobile-screen {
-    padding-left: 20px;
-    padding-right: 20px;
+    padding: 0px;
   }
   @include tablet-screen {
-    padding-left: 50px;
-    padding-right: 50px;
+    padding: 0px;
   }
   @include desktop-screen {
     padding-left: 100px;
