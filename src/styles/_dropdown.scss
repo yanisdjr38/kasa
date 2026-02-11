@@ -15,6 +15,7 @@
     justify-content: space-between;
     align-items: center;
     cursor: pointer;
+    user-select: none;
 
     &::-webkit-details-marker {
       display: none;
@@ -41,5 +42,20 @@
     font-size: $font-size-m;
     color: $text-color;
     font-family: $font-family;
+  }
+
+  &[open] .dropdown-content {
+    animation: dropdown-content 0.5s ease forwards;
+  }
+
+  @keyframes dropdown-content {
+    from {
+      opacity: 0;
+      transform: translateY(-1px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
 }
