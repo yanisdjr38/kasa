@@ -3,7 +3,7 @@ import Carousel from "../../components/Carousel";
 import DescriptionEquipments from "../../components/DescriptionEquipments";
 import HousingHeader from "../../components/HousingHeader";
 import logements from "../../data/logements.json";
-
+// Composant pour afficher les détails d'un logement spécifique
 function Housing() {
   const { id } = useParams();
   const logement = logements.find((item) => item.id === id);
